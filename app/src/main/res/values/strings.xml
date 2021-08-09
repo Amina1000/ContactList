@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Contact list</string>
+    <string name="content_provider">content provider</string>
+    <string name="history">history</string>
+</resources>
