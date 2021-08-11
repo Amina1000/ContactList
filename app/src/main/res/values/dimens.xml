@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="contact_margin">15dp</dimen>
-    <dimen name="main_container_text_size">12sp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="text_size_address">24sp</dimen>
 </resources>

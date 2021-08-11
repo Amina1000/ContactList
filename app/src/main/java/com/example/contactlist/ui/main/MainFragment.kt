@@ -17,7 +17,7 @@ import androidx.core.content.ContextCompat
 import com.example.contactlist.R
 import com.example.contactlist.databinding.MainFragmentBinding
 
-const val REQUEST_CODE = 42
+private const val REQUEST_CODE = 42
 
 class MainFragment : Fragment() {
 
@@ -74,6 +74,7 @@ class MainFragment : Fragment() {
             }
         }
     }
+
     private fun getContacts() {
         context?.let {
             // Получаем ContentResolver у контекста
@@ -104,12 +105,14 @@ class MainFragment : Fragment() {
             cursorWithContacts?.close()
         }
     }
+
     private fun addView(context: Context, textToShow: String) {
         binding.containerForContacts.addView(AppCompatTextView(context).apply {
             text = textToShow
-            textSize = resources.getDimension(R.dimen.main_container_text_size)
+            textSize = resources.getDimension(R.dimen.text_size)
         })
     }
+
     private fun requestPermission() {
         requestPermissions(arrayOf(Manifest.permission.READ_CONTACTS), REQUEST_CODE)
     }

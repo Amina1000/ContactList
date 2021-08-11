@@ -6,11 +6,9 @@
         android:icon="@drawable/ic_launcher_foreground"
         android:title="@string/content_provider"
         app:showAsAction="ifRoom" />
-
     <item
-        android:id="@+id/menu_history"
-        android:icon="@drawable/ic_baseline_history_10"
-        android:title="@string/history"
+        android:id="@+id/menu_location"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="@string/location"
         app:showAsAction="ifRoom" />
-
 </menu>

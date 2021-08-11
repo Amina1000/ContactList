@@ -1,11 +1,11 @@
 package com.example.contactlist
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.contactlist.ui.gps.GoogleMapsFragment
 import com.example.contactlist.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
@@ -28,15 +28,23 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menu_content_provider -> {
-                supportFragmentManager.apply {
-                    beginTransaction()
-                        .add(R.id.container, MainFragment.newInstance())
-                        .addToBackStack("")
-                        .commitAllowingStateLoss()
-                }
+                addFragment(MainFragment.newInstance())
+                true
+            }
+            R.id.menu_location -> {
+                addFragment(GoogleMapsFragment.newInstance())
                 true
             }
             else -> true
+        }
+    }
+
+    private fun addFragment(fragment:Fragment) {
+        supportFragmentManager.apply {
+            beginTransaction()
+                .replace(R.id.container, fragment)
+                .addToBackStack("")
+                .commitAllowingStateLoss()
         }
     }
 }
