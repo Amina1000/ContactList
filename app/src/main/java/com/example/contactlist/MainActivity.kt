@@ -5,7 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.contactlist.ui.gps.GoogleMapsFragment
+import com.example.contactlist.ui.gps.GpsFragment
 import com.example.contactlist.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.menu_location -> {
-                addFragment(GoogleMapsFragment.newInstance())
+                addFragment(GpsFragment.newInstance())
                 true
             }
             else -> true

@@ -109,7 +109,7 @@ class MainFragment : Fragment() {
     private fun addView(context: Context, textToShow: String) {
         binding.containerForContacts.addView(AppCompatTextView(context).apply {
             text = textToShow
-            textSize = resources.getDimension(R.dimen.text_size)
+            textSize = resources.getDimension(R.dimen.main_container_text_size)
         })
     }
 
